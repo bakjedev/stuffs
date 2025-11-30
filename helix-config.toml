@@ -1,0 +1,8 @@
+theme = "gruber-darker"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.terminal]
+command = "xterm"
+args = ["-e"]
