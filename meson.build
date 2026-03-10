@@ -1,4 +1,4 @@
-project('testing_meson', 'cpp',
+project('testing_meson', 'cpp', version: '0.0', meson_version: '>=1.1.0',
   default_options: [
     'cpp_std=c++20',
     'warning_level=3',
@@ -32,4 +32,8 @@ extra_warnings = compiler.get_supported_arguments(
 
 add_project_arguments(extra_warnings, language : 'cpp')
 
-executable(meson.project_name(), 'src/main.cpp')
+sources = files(
+  'src/main.cpp'
+)
+
+executable(meson.project_name(), sources)
